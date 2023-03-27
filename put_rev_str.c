@@ -14,7 +14,7 @@ char *s = va_arg(args, char *);
 
 if (!s)
 {
-s = "";
+s = "(null)";
 }
 
 /* geting the lenght of string s */

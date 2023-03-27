@@ -7,29 +7,23 @@
  * Return: Lenght of the reversed string.
  */
 
-int put_rev_str(va_list args)
+int print_rev_string(va_list args)
 {
-int Fcount = 0, i = 0;
-char *s = va_arg(args, char *);
 
-if (!s)
-{
-s = "(null)";
-}
+	int count_fun = 0, i = 0;
+	char *s = va_arg(args, char *);
 
-/* geting the lenght of string s */
-while (s[i])
-{
-++i;
-}
-
-/* now we print the string from bottom to top */
-while (i >= 0)
-{
-Fcount += _putchar(s[i]);
- --i;
-}
-
-Fcount--;
-return (Fcount);
+	if (!s)
+		s = "(null)";
+	while (s[i])
+	{
+		i++;
+	}
+	while (i >= 0)
+	{
+		count_fun += _putchar(s[i]);
+		i--;
+	}
+	count_fun--;
+	return (count_fun);
 }

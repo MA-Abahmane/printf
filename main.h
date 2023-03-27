@@ -18,7 +18,10 @@ int put_str(va_list args);
 int put_digt(va_list args);
 int put_mod(va_list args);
 
-/* matcher list */
+/**
+ * match_er - a structure that takes in a character and
+ * a pointer to a function.
+ */
 typedef struct match_er
 {
 char t;

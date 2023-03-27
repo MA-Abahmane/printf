@@ -30,6 +30,6 @@ Fcount += _putchar(s[i]);
  --i;
 }
 
-
+Fcount = Fcount - 1;
 return (Fcount);
 }

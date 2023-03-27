@@ -19,7 +19,7 @@ int put_digt(va_list args);
 int put_mod(va_list args);
 
 /**
- * match_er - a structure that takes in a character and
+ * @match_er: a structure that takes in a character and
  * a pointer to a function.
  */
 typedef struct match_er

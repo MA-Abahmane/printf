@@ -17,8 +17,6 @@ int put_char(va_list args);
 int put_str(va_list args);
 int put_digt(va_list args);
 int put_mod(va_list args);
-int put_Udigt(va_list args);
-int put_rev_str(va_list args);
 
 /**
  * struct match_er - a Structure.

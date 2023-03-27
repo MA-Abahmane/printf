@@ -7,7 +7,7 @@
  * Return: Lenght of the reversed string.
  */
 
-int print_rev_str(va_list args)
+int put_rev_str(va_list args)
 {
 
 	int count_fun = 0, i = 0;

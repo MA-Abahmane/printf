@@ -1,9 +1,3 @@
-/**
- * Developers: Oumaima Fiyarhi and Mohamed Amine Abahmane
- * Date: 27/3/2023
- * Description: [ With hard work and dedication, We have made our own printf function! ]
- */
-
 #include <unistd.h>
 #include "main.h"
 
@@ -13,66 +7,53 @@
  *
  * Return: full size of a given string.
  */
-
 int _printf(const char *format, ...)
 {
 int i = 0, count = 0;
 int Fcount;
-  
 va_list args;
-
 va_start(args, format);
 /* check if format is true, and if it contains "%" alone */
 if (!format || (format[0] == '%' && !format[1]))
 return (-1);
-
-/* check if the first caracter in format is '%' and it is followed by just a space */
+/* check if the first char in format is '%' and it's followed by a space alone */
 if (format[0] == '%' && format[1] == ' ' && !format[2])
 return (-1);
 
 /* checking if format has a type conversion specifier (%d, %s, \n, \0...) */
 while (format[i])
 {
-
 /* Function counter*/
 Fcount = 0;
 if (format[i] == '%')
 {
-
 /* check if "%" is alone */
 if (!format[i + 1] || (format[i + 1] == ' ' && !format[i + 2]))
 {
 count = -1;
 break;
 }
-
-/* send the character infront of "%" to get_function to match 
-the specifiers with its printing function */
+/* send the character infront of "%" to get_function to match */
+/* the specifiers with its printing function */
 Fcount += get_function(format[i + 1], args);
-
 if (Fcount == 0)
 count += _putchar(format[i + 1]);
 if (Fcount == -1)
 count = -1;
-        
 i++;
 }
 
 /* normal caracter print */
 else 
 {
-
 if (count != -1)
 count += _putchar(format[i]);
 }
-
 i++;
 /* add up the counts */
 if (count != -1)
 count += Fcount;
 }
-
 va_end(args);
-
 return (count);
 }

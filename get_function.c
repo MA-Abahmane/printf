@@ -30,7 +30,7 @@ while (matcher[i].f)
 {
 if (matcher[i].t == c)
 Fcount += matcher[i].f(args);
-    
+
 i++;
 }
 

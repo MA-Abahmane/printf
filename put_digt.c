@@ -2,7 +2,7 @@
 #include <unistd.h>
 
 /**
- * print_digit - a function that prints a given integers.
+ * put_digt - a function that prints any given integers.
  * @args: given argument.
  *
  * Return: number of digits found.

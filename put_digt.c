@@ -21,7 +21,7 @@ if (num < 0)
 Fcount += _putchar('-');
 num *= -1;
 }
- 
+
 /* check if num is negative  */
 if (num < 10)
 return (Fcount += _putchar(num + '0'));
@@ -34,7 +34,7 @@ while (num2 > 9)
 decimal *= 10;
 num2 /= 10;
 }
-	
+
 while (decimal >= 1)
 {
 Fcount += _putchar(((num / decimal) % 10) + '0');

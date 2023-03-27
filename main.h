@@ -19,8 +19,9 @@ int put_digt(va_list args);
 int put_mod(va_list args);
 
 /**
- * struct format - Struct for format
- * @match_er: Struct format
+ * struct match_er - a Structure.
+ * @t: a character
+ * @f: a function pointer
  */
 
 typedef struct match_er

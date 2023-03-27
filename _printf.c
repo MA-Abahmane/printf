@@ -9,10 +9,9 @@ int _printf(const char *format, ...)
 int i = 0, count = 0, Fcount;
 va_list args;
 va_start(args, format);
-/* check if format is true, and if it contains "%" alone */
 if (!format || (format[0] == '%' && !format[1]))
 return (-1);
-/* check if the first char in format is '%' and it's followed by a space alone */
+/* check if the first char in format is % and its followed by a space alone */
 if (format[0] == '%' && format[1] == ' ' && !format[2])
 return (-1);
 /* checking if format has a type conversion specifier (%d, %s, \n, \0...) */
@@ -36,7 +35,7 @@ count = -1;
 i++;
 }
 /* normal caracter print */
-else 
+else
 {
 if (count != -1)
 count += _putchar(format[i]);

@@ -23,7 +23,7 @@ f_t matcher[] = {
 {'i', put_digt},
 {'%', put_mod},
 {'r', put_rev_str},
-{NULL, NULL}
+{0, NULL}
 };
 
 i = 0;

@@ -14,6 +14,7 @@ return (-1);
 /* check if the first char in format is % and its followed by a space alone */
 if (format[0] == '%' && format[1] == ' ' && !format[2])
 return (-1);
+
 /* checking if format has a type conversion specifier (%d, %s, \n, \0...) */
 while (format[i])
 {

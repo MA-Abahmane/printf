@@ -37,7 +37,6 @@ i++;
 /* normal caracter print */
 else
 {
-if (count != -1)
 count += _putchar(format[i]);
 }
 i++;

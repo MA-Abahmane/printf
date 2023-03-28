@@ -9,21 +9,23 @@
 
 int put_str(va_list args)
 {
-int i;
+int i = 0;
 int Fcount = 0;
-char *str = va_arg(args, char *);
+
+char *s = va_arg(args, char *);
 
 /* check is the string is NULL or empty */
-if (!str)
+if (!s)
 str = "(null)";
 
-if (str[0] == '\0')
+if (s[0] == '\0')
 return (-1);
 
 /* print every caracter in the string */
-for (i = 0; str[i] != '\0'; i++)
+while (s[i] != '\0')
 {
-Fcount += _putchar(str[i]);
+Fcount += _putchar(s[i]);
+++i;
 }
 
 return (Fcount);

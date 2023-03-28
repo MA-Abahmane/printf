@@ -27,7 +27,7 @@ while (s[i])
 while (i >= 0)
 {
 Fcount += _putchar(s[i]);
- --i;
+--i;
 }
 
 Fcount = Fcount - 1;

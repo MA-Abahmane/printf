@@ -9,7 +9,7 @@
 
 int put_str(va_list args)
 {
-int i = 0;
+int i;
 int Fcount = 0;
 
 char *s = va_arg(args, char *);
@@ -22,10 +22,11 @@ if (s[0] == '\0')
 return (-1);
 
 /* print every caracter in the string */
+i = 0;
 while (s[i] != '\0')
 {
 Fcount += _putchar(s[i]);
-++i;
+i++;
 }
 
 return (Fcount);

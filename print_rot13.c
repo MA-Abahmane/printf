@@ -2,9 +2,9 @@
 
 /**
  * put_rot13 - a rot13 converter.
- * @agrs: given arguments.
+ * @args: given arguments.
  *
- * Return: number of caracters fount in the given argument.
+ * Return: args lenght.
  */
 
 int put_rot13(va_list args)

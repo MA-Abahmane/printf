@@ -16,7 +16,7 @@ char *s = va_arg(args, char *);
 
 /* check is the string is NULL or empty */
 if (!s)
-str = "(null)";
+s = "(null)";
 
 if (s[0] == '\0')
 return (-1);

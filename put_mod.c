@@ -9,6 +9,7 @@
 
 int put_mod(va_list args)
 {
+(void)args;
 
 _putchar('%');
 return (1);

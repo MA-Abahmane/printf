@@ -4,6 +4,7 @@
  * @format: given parameters.
  * Return: full size of a given string.
  */
+
 int _printf(const char *format, ...)
 {
 int i = 0, count = 0, Fcount;
@@ -14,7 +15,6 @@ if (!format || (format[0] == '%' && !format[1]))
 return (-1);
 if (format[0] == '%' && format[1] == ' ' && !format[2])
 return (-1);
-
 /* checking if format has a type conversion specifier (%d, %s, \n, \0...) */
 while (format[i])
 {
@@ -45,6 +45,5 @@ if (count != -1)
 count += Fcount;
 }
 va_end(args);
-
 return (count);
 }

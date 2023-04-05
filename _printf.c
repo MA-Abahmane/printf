@@ -11,7 +11,7 @@ int i = 0, count = 0, Fcount;
 va_list args;
 va_start(args, format);
 /* check if the first char in format is % and its followed by a space alone */
-if ((format[0] == '%' && !format[1]) || !format)
+if (!format || (format[0] == '%' && !format[1]))
 return (-1);
 if (format[0] == '%' && format[1] == ' ' && !format[2])
 return (-1);
